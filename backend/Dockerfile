@@ -1,5 +1,5 @@
 # NOTE: This Dockerfile is for Render deployment only.
-# For local development, run directly with your Python 3.13 environment.
+# For local development, run directly with your Python 3.14 environment.
 # See README.md for local setup instructions.
 
 FROM python:3.11-slim AS builder

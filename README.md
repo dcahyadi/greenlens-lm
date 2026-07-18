@@ -10,15 +10,15 @@
 
 ## 📚 Stack
 
-| Layer | Technology |
-|---|---|
-| Frontend | React 18 + TypeScript + Vite + Tailwind CSS |
-| Backend | FastAPI + Python 3.13 |
-| RAG | LangChain + ChromaDB (embedded) |
-| Embeddings | BAAI/bge-m3 (multilingual EN+ID) |
-| LLM | OpenRouter (`openai/gpt-oss-20b:free`) |
+| Layer | Technology                                     |
+|---|------------------------------------------------|
+| Frontend | React 18 + TypeScript + Vite + Tailwind CSS    |
+| Backend | FastAPI + Python 3.14                          |
+| RAG | LangChain + ChromaDB (embedded)                |
+| Embeddings | BAAI/bge-m3 (multilingual EN+ID)               |
+| LLM | OpenRouter (`openai/gpt-oss-20b:free`)         |
 | Deployment | Render (Docker backend + Static Site frontend) |
-| CI/CD | GitHub Actions |
+| CI/CD | GitHub Actions                                 |
 
 
 ## 📚 Document Corpus
@@ -46,7 +46,7 @@
 | 🏦 Green finance | [TKBI Fact Sheets](https://ojk.go.id/id/Publikasi/Roadmap-dan-Pedoman/Sektor-Jasa-Keuangan/Keuangan-Berkelanjutan/Documents/Fact%20Sheets%20TKBI.pdf) | 2026 | EN | ojk.go.id |
 | 🏦 Green finance | [TKBI FAQ](https://ojk.go.id/id/Publikasi/Roadmap-dan-Pedoman/Sektor-Jasa-Keuangan/Keuangan-Berkelanjutan/Documents/FAQ%20Taksonomi%20untuk%20Keuangan%20Berkelanjutan%20Indonesia%20%28TKBI%29%20Versi%203.pdf) | 2026 | EN | ojk.go.id |
 
-## 🚀 Local Development (Python 3.13)
+## 🚀 Local Development (Python 3.14)
 
 ### Prerequisites
 - Python 3.14.x
@@ -83,7 +83,7 @@ cp .env.example .env
 python -m venv venv
 source venv/bin/activate # Windows: venv\Scripts\activate
 
-# Python 3.13: install PyTorch CPU first, then the rest
+# Python 3.14: install PyTorch CPU first, then the rest
 pip install torch --index-url https://download.pytorch.org/whl/cpu
 pip install -r requirements.txt
 
@@ -122,7 +122,6 @@ pytest tests/ -v
 ## 📄 Docs
 
 - [Design & Testing](docs/design-and-testing.md) — architecture decisions, testing strategy, RAG evaluation
-- [AI Tooling](docs/ai-tooling.md) — AI tools used during development
 - [Deployed](docs/deployed.md) — live deployment link
 
 ## 🚀 Deployment (Render)

@@ -14,7 +14,7 @@ GreenLens LM is a full-stack RAG (Retrieval-Augmented Generation) application th
                                                  │ HTTP /api/query
                                                  ▼
 ┌────────────────────────────────────────────────────────────────────────┐
-│                   FastAPI Backend (Python 3.13)                        │
+│                   FastAPI Backend (Python 3.14)                        │
 │                                                                        │
 │  ┌────────────────────┐     ┌────────────────────────────────────┐     │
 │  │    API routers     │────>│           RAG chain                │     │
@@ -154,14 +154,14 @@ Two other candidates under 500MB were ruled out before testing without even need
 
 ### 2.8 Technology Stack
 
-| Component | Choice | Reason |
-|---|---|---|
-| Backend | FastAPI + Python 3.13 | Async, auto OpenAPI docs, Pydantic validation |
-| Frontend | React + TypeScript + Vite | Fast build, type safety, component reuse |
-| Styling | Tailwind CSS | Utility-first, no separate CSS files to maintain |
+| Component | Choice                                 | Reason |
+|---|----------------------------------------|---|
+| Backend | FastAPI + Python 3.14                  | Async, auto OpenAPI docs, Pydantic validation |
+| Frontend | React + TypeScript + Vite              | Fast build, type safety, component reuse |
+| Styling | Tailwind CSS                           | Utility-first, no separate CSS files to maintain |
 | LLM | OpenRouter (`openai/gpt-oss-20b:free`) | Free tier, OpenAI-compatible API; final choice after two earlier models were discontinued or swapped unpredictably — see `ai-tooling.md` for full history |
-| Deployment | Render | Free tier, Docker support, auto-deploy from GitHub, Singapore region |
-| CI/CD | GitHub Actions | Lint + test + build check on every PR |
+| Deployment | Render                                 | Free tier, Docker support, auto-deploy from GitHub, Singapore region |
+| CI/CD | GitHub Actions                         | Lint + test + build check on every PR |
 
 ### 2.9 Deployment: Render vs Alternatives
 

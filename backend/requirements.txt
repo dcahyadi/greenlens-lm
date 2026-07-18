@@ -13,11 +13,11 @@ langchain-chroma>=0.1.4
 langchain-openai>=0.2.11
 
 # ── Vector store ──────────────────────────────────────────────────────────────
-# chromadb 1.5+ ships cp39-abi3 wheels → fully compatible with Python 3.13
+# chromadb 1.5+ ships cp39-abi3 wheels → fully compatible with Python 3.14
 chromadb>=1.5.0
 
 # ── Embeddings (multilingual EN+ID) ───────────────────────────────────────────
-# sentence-transformers 5.x requires Python 3.10+ — works fine on 3.13
+# sentence-transformers 5.x requires Python 3.10+ — works fine on 3.14
 sentence-transformers>=5.0.0
 transformers>=4.47.1
 
