@@ -12,7 +12,7 @@
 
 | Layer | Technology                                     |
 |---|------------------------------------------------|
-| Frontend | React 18 + TypeScript + Vite + Tailwind CSS    |
+| Frontend | React 19 + TypeScript + Vite + Tailwind CSS    |
 | Backend | FastAPI + Python 3.14                          |
 | RAG | LangChain + ChromaDB (embedded)                |
 | Embeddings | BAAI/bge-m3 (multilingual EN+ID)               |
@@ -123,14 +123,3 @@ pytest tests/ -v
 
 - [Design & Testing](docs/design-and-testing.md) — architecture decisions, testing strategy, RAG evaluation
 - [Deployed](docs/deployed.md) — live deployment link
-
-## 🚀 Deployment (Render)
-
-1. Push to GitHub
-2. Connect repo on render.com → "Use Blueprint" (reads `render.yaml` automatically)
-3. Set `OPENROUTER_API_KEY` in Render dashboard under Environment
-4. Run ingestion locally, then upload to Render disk:
-   ```bash
-   export RENDER_SSH=ssh-xxxx@ssh.singapore.render.com
-   ./backend/ingestion/upload_to_render.sh
-   ```

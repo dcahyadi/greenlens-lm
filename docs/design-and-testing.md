@@ -205,14 +205,6 @@ Two other candidates under 500MB were ruled out before testing without even need
 
 **Trade-off:** the `/api/ingest` endpoint cannot function in production, since the raw PDFs are never present in the deployed container — ingestion must be re-run locally and a new archive re-uploaded whenever the document corpus changes.
 
-### 2.13 Markdown Rendering for LLM Responses
-
-**Decision:** Render assistant messages through `react-markdown` rather than as plain text.
-
-**Reason:** The LLM (prompted to use bullet points for lists, per the system prompt in 2.4) correctly formats its responses in Markdown — bold headers, bulleted lists — but the original `Message.tsx` implementation simply split the raw response text by newline and rendered each line as plain text. This meant formatting markers like `**Carbon credits**` appeared as literal asterisks in the UI instead of rendering as bold text, since nothing parsed the Markdown syntax.
-
-**Implementation:** `frontend/src/components/Message.tsx` — assistant messages are passed through `<ReactMarkdown>` with custom component overrides styled to match the existing Tailwind design (bold, bulleted/numbered lists, inline code, links). User messages intentionally continue to render as plain text, since there is no need to parse Markdown from content the user typed themselves, and doing so could allow unintended formatting from pasted text.
-
 ---
 
 ## 3. Software Patterns Used
