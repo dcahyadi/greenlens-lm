@@ -18,7 +18,7 @@ chromadb>=1.5.0
 
 # ── Embeddings (multilingual EN+ID) ───────────────────────────────────────────
 # sentence-transformers 5.x requires Python 3.10+ — works fine on 3.14
-sentence-transformers>=5.0.0
+sentence-transformers>=5.2.0
 transformers>=4.47.1
 
 # ── PyTorch CPU ───────────────────────────────────────────────────────────────

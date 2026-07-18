@@ -1,8 +1,8 @@
-# NOTE: This Dockerfile is for Render deployment only.
-# For local development, run directly with your Python 3.14 environment.
-# See README.md for local setup instructions.
+# NOTE: This Dockerfile is for Render deployment.
+# Matches .python-version — deployment now runs the same Python version
+# as local dev (3.14), so no local/prod interpreter drift.
 
-FROM python:3.11-slim AS builder
+FROM python:3.14-slim AS builder
 
 WORKDIR /app
 
@@ -15,7 +15,7 @@ RUN pip install --no-cache-dir --upgrade pip \
     && pip install --no-cache-dir torch --index-url https://download.pytorch.org/whl/cpu \
     && pip install --no-cache-dir -r requirements.txt
 
-FROM python:3.11-slim
+FROM python:3.14-slim
 
 WORKDIR /app
 
@@ -23,7 +23,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libmagic1 poppler-utils curl \
     && rm -rf /var/lib/apt/lists/*
 
-COPY --from=builder /usr/local/lib/python3.11/site-packages /usr/local/lib/python3.11/site-packages
+COPY --from=builder /usr/local/lib/python3.14/site-packages /usr/local/lib/python3.14/site-packages
 COPY --from=builder /usr/local/bin /usr/local/bin
 
 COPY . .
