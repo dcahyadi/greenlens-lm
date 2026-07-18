@@ -1,0 +1,58 @@
+services:
+  - type: web
+    name: greenlens-lm-api
+    runtime: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    plan: free
+    region: singapore
+    autoDeployTrigger: checksPass   # only deploy if GitHub Actions CI passes
+    envVars:
+      - key: OPENROUTER_API_KEY
+        sync: false
+      - key: HF_TOKEN
+        sync: false
+      - key: EMBEDDING_MODEL
+        value: BAAI/bge-m3
+      - key: CHROMA_PATH
+        value: /app/chroma_db
+      - key: CHROMA_DB_DOWNLOAD_URL
+        value: https://github.com/dcahyadi/greenlens-lm/releases/download/chroma-db-v1/chroma_db.zip
+      - key: LLM_MODEL
+        value: openai/gpt-oss-20b:free
+      - key: ALLOWED_ORIGINS
+        value: https://greenlens-lm.onrender.com
+      - key: ENVIRONMENT
+        value: production
+      - key: LOG_LEVEL
+        value: INFO
+      - key: RATE_LIMIT_PER_MINUTE
+        value: "20"
+    buildFilter:
+      paths:
+        - backend/**
+    healthCheckPath: /health
+
+  - type: web
+    name: greenlens-lm-web
+    runtime: static
+    buildCommand: cd frontend && npm install && npm run build
+    staticPublishPath: ./frontend/dist
+    autoDeployTrigger: checksPass   # only deploy if GitHub Actions CI passes
+    buildFilter:
+      paths:
+        - frontend/**
+    headers:
+      - path: /*
+        name: X-Frame-Options
+        value: DENY
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+    envVars:
+      - key: VITE_API_URL
+        value: https://greenlens-lm-api.onrender.com

@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.Python
+*.egg-info/
+dist/
+build/
+
+# Env
+.env
+backend/.env
+frontend/.env.local
+
+# ChromaDB (generated locally — upload to Render separately)
+chroma_db/
+chroma_db_test/
+backend/chroma_db/
+backend/chroma_db.zip
+
+# PDFs (large — add your own to data/documents/)
+# data/documents/**/*.pdf
+
+# Node
+node_modules/
+frontend/node_modules/
+frontend/dist/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Test
+.coverage
+.pytest_cache/
+htmlcov/
+
+# Evaluation output
+backend/evaluation/eval_report.json

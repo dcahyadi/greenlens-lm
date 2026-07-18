@@ -1,0 +1,179 @@
+[
+  {
+    "question": "What is Indonesia's unconditional emission reduction target in the Enhanced NDC 2022?",
+    "expected_source": "ndc/enhanced-ndc-2022-en.pdf",
+    "expected_category": "climate_commitment",
+    "language": "en",
+    "expected_answer_contains": ["31.89", "unconditional"]
+  },
+  {
+    "question": "How much financing was committed under JETP Indonesia?",
+    "expected_source": "jetp/jetp-cipp-2023.pdf",
+    "expected_category": "energy_transition",
+    "language": "en",
+    "expected_answer_contains": ["20 billion", "USD"]
+  },
+  {
+    "question": "What is the PLTS Atap regulation under Permen ESDM 2/2024?",
+    "expected_source": "esdm/permen-esdm-2-2024.pdf",
+    "expected_category": "renewable_energy",
+    "language": "en",
+    "expected_answer_contains": ["PLTS", "net metering"]
+  },
+  {
+    "question": "What carbon pricing instruments are introduced in Perpres 98/2021?",
+    "expected_source": "carbon/perpres-98-2021-en.pdf",
+    "expected_category": "carbon_market",
+    "language": "en",
+    "expected_answer_contains": ["carbon trading", "carbon levy"]
+  },
+  {
+    "question": "What is the status of JETP implementation as of 2025?",
+    "expected_source": "jetp/jetp-progress-report-2025-en.pdf",
+    "expected_category": "energy_transition",
+    "language": "en",
+    "expected_answer_contains": ["financing", "approved"]
+  },
+  {
+    "question": "Apa itu AMDAL dan siapa yang wajib membuatnya?",
+    "expected_source": "klhk/permen-LHK-4-2021.pdf",
+    "expected_category": "environmental_law",
+    "language": "id",
+    "expected_answer_contains": ["AMDAL", "lingkungan"]
+  },
+  {
+    "question": "How does TKBI version 3 classify renewable energy activities?",
+    "expected_source": "ojk/tkbi-ver3-2026-en.pdf",
+    "expected_category": "green_finance",
+    "language": "en",
+    "expected_answer_contains": ["green", "classification"]
+  },
+  {
+    "question": "What is IDX Carbon and how does POJK 14/2023 regulate it?",
+    "expected_source": "carbon/pojk-14-2023-id-carbon-trading.pdf",
+    "expected_category": "carbon_market",
+    "language": "en",
+    "expected_answer_contains": ["bursa karbon", "carbon"]
+  },
+  {
+    "question": "What are Indonesia's renewable energy targets under Perpres 112/2022?",
+    "expected_source": "esdm/perpres-112-2022.pdf",
+    "expected_category": "renewable_energy",
+    "language": "en",
+    "expected_answer_contains": ["renewable", "energy"]
+  },
+  {
+    "question": "Bagaimana Perpres 110/2025 memperbarui kerangka ekonomi karbon?",
+    "expected_source": "carbon/perpres-110-2025-id.pdf",
+    "expected_category": "carbon_market",
+    "language": "id",
+    "expected_answer_contains": ["karbon", "emisi"]
+  },
+  {
+    "question": "What was Indonesia's conditional emission reduction target in the 2021 NDC before it was enhanced in 2022?",
+    "expected_source": "ndc/updated-ndc-2021-en.pdf",
+    "expected_category": "climate_commitment",
+    "language": "en",
+    "expected_answer_contains": ["41", "conditional"]
+  },
+  {
+    "question": "Bagaimana status implementasi JETP pada tahun 2025?",
+    "expected_source": "jetp/jetp-progress-report-2025-id.pdf",
+    "expected_category": "energy_transition",
+    "language": "id",
+    "expected_answer_contains": ["pendanaan", "JETP"]
+  },
+  {
+    "question": "How does PermenLHK 21/2022 implement Indonesia's carbon economic value (Nilai Ekonomi Karbon) mechanism?",
+    "expected_source": "klhk/permen-LHK-21-2022.pdf",
+    "expected_category": "environmental_law",
+    "language": "en",
+    "expected_answer_contains": ["carbon economic value", "NEK"]
+  },
+  {
+    "question": "What environmental protection framework does PP 22/2021 establish?",
+    "expected_source": "klhk/pp-22-2021.pdf",
+    "expected_category": "environmental_law",
+    "language": "en",
+    "expected_answer_contains": ["environmental protection", "AMDAL"]
+  },
+  {
+    "question": "What is summarized in the OJK TKBI fact sheets?",
+    "expected_source": "ojk/tkbi-fact-sheets.pdf",
+    "expected_category": "green_finance",
+    "language": "en",
+    "expected_answer_contains": ["taxonomy", "green"]
+  },
+  {
+    "question": "According to the TKBI FAQ, how should companies classify a transition activity?",
+    "expected_source": "ojk/tkbi-ver3-faq.pdf",
+    "expected_category": "green_finance",
+    "language": "en",
+    "expected_answer_contains": ["transition", "classification"]
+  },
+  {
+    "question": "Bagaimana TKBI versi 3 2026 mengklasifikasikan aktivitas transisi?",
+    "expected_source": "ojk/tkbi-ver3-2026-id.pdf",
+    "expected_category": "green_finance",
+    "language": "id",
+    "expected_answer_contains": ["transisi", "klasifikasi"]
+  },
+  {
+    "question": "Apa instrumen nilai ekonomi karbon yang diatur dalam Perpres 98/2021?",
+    "expected_source": "carbon/perpres-98-2021-id.pdf",
+    "expected_category": "carbon_market",
+    "language": "id",
+    "expected_answer_contains": ["karbon", "nilai ekonomi"]
+  },
+  {
+    "question": "What adaptation measures are outlined in Indonesia's Enhanced NDC 2022?",
+    "expected_source": "ndc/enhanced-ndc-2022-en.pdf",
+    "expected_category": "climate_commitment",
+    "language": "en",
+    "expected_answer_contains": ["adaptation"]
+  },
+  {
+    "question": "What coal retirement plans are described in the JETP CIPP 2023?",
+    "expected_source": "jetp/jetp-cipp-2023.pdf",
+    "expected_category": "energy_transition",
+    "language": "en",
+    "expected_answer_contains": ["coal", "retirement"]
+  },
+  {
+    "question": "What net metering scheme applies to rooftop solar under Permen ESDM 2/2024?",
+    "expected_source": "esdm/permen-esdm-2-2024.pdf",
+    "expected_category": "renewable_energy",
+    "language": "en",
+    "expected_answer_contains": ["net metering", "rooftop"]
+  },
+  {
+    "question": "How does Perpres 112/2022 address the acceleration of renewable energy and coal power plant retirement?",
+    "expected_source": "esdm/perpres-112-2022.pdf",
+    "expected_category": "renewable_energy",
+    "language": "en",
+    "expected_answer_contains": ["renewable", "coal"]
+  },
+  {
+    "question": "Who can participate in Indonesia's carbon exchange under POJK 14/2023?",
+    "expected_source": "carbon/pojk-14-2023-id-carbon-trading.pdf",
+    "expected_category": "carbon_market",
+    "language": "en",
+    "expected_answer_contains": ["carbon exchange", "participant"]
+  },
+  {
+    "question": "What are the tax incentives for electric vehicle manufacturing in Indonesia?",
+    "expected_source": "",
+    "expected_category": null,
+    "language": "en",
+    "expected_answer_contains": ["couldn't find"],
+    "note": "Adversarial case — not covered by the corpus. Tests that the system correctly declines rather than hallucinating an answer."
+  },
+  {
+    "question": "Berapa harga BBM bersubsidi di Indonesia pada tahun 2026?",
+    "expected_source": "",
+    "expected_category": null,
+    "language": "id",
+    "expected_answer_contains": ["tidak", "dokumen"],
+    "note": "Adversarial case (Indonesian) — not covered by the corpus. Keyword check is deliberately lenient since the exact refusal phrasing may vary; this case is primarily meant for manual review of the answer_preview."
+  }
+]
