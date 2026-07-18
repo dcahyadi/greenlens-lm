@@ -1,5 +1,17 @@
 # Deployed Application
 
+## Deployment (Render)
+This project uses Render for deployment as an example, but other deployment platforms can also be used.
+
+1. Push to GitHub
+2. Connect repo on render.com → "Use Blueprint" (reads `render.yaml` automatically)
+3. Set `OPENROUTER_API_KEY` in Render dashboard under Environment
+4. Run ingestion locally, then upload to Render disk:
+   ```bash
+   export RENDER_SSH=ssh-xxxx@ssh.singapore.render.com
+   ./backend/ingestion/upload_to_render.sh
+   ```
+   
 ## Live Links
 
 | Service | URL                                                     |
@@ -17,7 +29,6 @@ The repository contains:
 - All source code (backend + frontend)
 - This deployment documentation
 - [Design & Testing document](design-and-testing.md)
-- [AI Tooling document](ai-tooling.md)
 - CI/CD pipeline (`.github/workflows/ci.yml`)
 - Render Blueprint (`render.yaml`)
 
