@@ -1,7 +1,7 @@
 # Deployed Application
 
 ## Deployment (Render)
-This project uses Render for deployment as an example, but other deployment platforms can also be used.
+This project uses Render for deployment as an example only, but other deployment platforms can also be used.
 
 1. Push to GitHub
 2. Connect repo on render.com → "Use Blueprint" (reads `render.yaml` automatically)
@@ -19,7 +19,6 @@ This project uses Render for deployment as an example, but other deployment plat
 | **Frontend (Web App)** | https://greenlens-lm.onrender.com                       |
 | **Backend API** | https://greenlens-lm-api.onrender.com                   |
 | **API Docs (Swagger)** | https://greenlens-lm-api.onrender.com/docs *(dev only)* |
-| **Health Check** | https://greenlens-lm-api.onrender.com/health            |
 
 ## GitHub Repository
 
@@ -55,7 +54,7 @@ GitHub (main branch)
 2. Set `OPENROUTER_API_KEY` and `HF_TOKEN` in Render dashboard → greenlens-lm-api → Environment
 3. Ran ingestion locally: `cd backend && python ingestion/indexer.py`
 4. Zipped the resulting `chroma_db/` folder and uploaded it as a GitHub Release
-   asset (`chroma-db-v1` tag), avoiding the cost of a paid persistent disk
+   asset for avoiding the cost of a paid persistent disk
 5. Set `CHROMA_DB_DOWNLOAD_URL` in `render.yaml` to the Release asset's direct
    download URL
 6. On each cold start, `app/startup.py` downloads and extracts this archive

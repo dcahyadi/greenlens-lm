@@ -121,5 +121,5 @@ pytest tests/ -v
 
 ## 📄 Docs
 
-- [Design & Testing](docs/design-and-testing.md) — architecture decisions, testing strategy, RAG evaluation
-- [Deployed](docs/deployed.md) — live deployment link
+- [Design & Testing](docs/design-and-testing.md) : architecture decisions, testing strategy, RAG evaluation
+- [Deployed](docs/deployed.md) : live deployment link
