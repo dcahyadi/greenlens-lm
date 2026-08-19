@@ -34,7 +34,7 @@ services:
     healthCheckPath: /health
 
   - type: web
-    name: greenlens-lm-web
+    name: greenlens-lm
     runtime: static
     buildCommand: cd frontend && npm install && npm run build
     staticPublishPath: ./frontend/dist
