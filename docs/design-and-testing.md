@@ -142,7 +142,7 @@ Two other candidates under 500MB were ruled out before testing without even need
 
 **Decision:** Tag every chunk with structured metadata (`category`, `regulation`, `year`, `language`, `source_file`, `page`) during ingestion.
 
-**Reason:** Enables filtered retrieval — when a user selects "Carbon Market" in the topic filter, the retriever only searches chunks tagged `category: carbon_market`. Without this, a question about AMDAL might retrieve carbon pricing chunks that happen to share keywords.
+**Reason:** Enables filtered retrieval - when a user selects "Carbon Market" in the topic filter, the retriever only searches chunks tagged `category: carbon_market`. Without this, a question about AMDAL might retrieve carbon pricing chunks that happen to share keywords.
 
 **Implementation:** `backend/ingestion/metadata.py` is a central registry mapping every filename to its full metadata. This keeps ingestion logic clean and makes it easy to update metadata when regulations change.
 
@@ -242,9 +242,7 @@ Run: `cd backend && python evaluation/eval_suite.py`
 | 24 | **Adversarial:** EV tax incentives (not in corpus) | — | none | en |
 | 25 | **Adversarial:** BBM subsidy price (not in corpus) | — | none | id |
 
-Compared to the original 10-question set, this expansion adds coverage for 5 previously-untested documents (Updated NDC 2021, PermenLHK 21/2022, PP 22/2021, TKBI Fact Sheets, TKBI FAQ), increases the Indonesian-language share from 20% to 24%, and adds the 2 adversarial cases to test for hallucination avoidance.
-
-### 4.3 Target Metrics
+### 4.3 Set Target Metrics
 
 | Metric | Target | Notes |
 |---|---|---|

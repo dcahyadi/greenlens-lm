@@ -23,7 +23,7 @@
 
 ## 📚 Document Corpus
 
-18 official government documents across 6 categories — all publicly available.
+18 official government documents across 6 categories, all publicly available.
 
 | Category | Regulation | Year | Lang | Source |
 |---|---|---|---|---|
