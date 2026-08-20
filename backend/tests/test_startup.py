@@ -87,7 +87,7 @@ def test_ensure_chroma_data_downloads_and_extracts_archive(tmp_path, monkeypatch
 
     test_settings = Settings(
         CHROMA_PATH=str(target_dir),
-        CHROMA_DB_DOWNLOAD_URL="http://example.invalid/chroma_db.zip",
+        CHROMA_DB_DOWNLOAD_URL="https://github.com/dcahyadi/greenlens-lm/releases/download/chroma-db-v1/chroma_db.zip",
     )
     monkeypatch.setattr(startup_module, "settings", test_settings)
 
@@ -114,7 +114,7 @@ def test_ensure_chroma_data_calls_correct_url(tmp_path, monkeypatch):
     a typo or stale hardcoded value silently pointing at the wrong asset."""
     target_dir = tmp_path / "chroma_url_check"
     zip_bytes = make_zip_bytes({"chroma.sqlite3": b"x"})
-    expected_url = "http://example.invalid/chroma-db-v1/chroma_db.zip"
+    expected_url = "https://github.com/dcahyadi/greenlens-lm/releases/download/chroma-db-v1/chroma_db.zip"
 
     test_settings = Settings(
         CHROMA_PATH=str(target_dir),
@@ -144,7 +144,7 @@ def test_ensure_chroma_data_raises_on_download_failure(tmp_path, monkeypatch):
     target_dir = tmp_path / "chroma_fail_target"
     test_settings = Settings(
         CHROMA_PATH=str(target_dir),
-        CHROMA_DB_DOWNLOAD_URL="http://example.invalid/chroma_db.zip",
+        CHROMA_DB_DOWNLOAD_URL="https://github.com/dcahyadi/greenlens-lm/releases/download/chroma-db-v1/chroma_db.zip",
     )
     monkeypatch.setattr(startup_module, "settings", test_settings)
 
@@ -165,7 +165,7 @@ def test_ensure_chroma_data_raises_on_corrupt_zip(tmp_path, monkeypatch):
     target_dir = tmp_path / "chroma_corrupt_target"
     test_settings = Settings(
         CHROMA_PATH=str(target_dir),
-        CHROMA_DB_DOWNLOAD_URL="http://example.invalid/chroma_db.zip",
+        CHROMA_DB_DOWNLOAD_URL="https://github.com/dcahyadi/greenlens-lm/releases/download/chroma-db-v1/chroma_db.zip",
     )
     monkeypatch.setattr(startup_module, "settings", test_settings)
 
